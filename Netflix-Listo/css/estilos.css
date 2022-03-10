@@ -1,0 +1,585 @@
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    * {
+        box-sizing: border-box;
+        font-family: 'Lato', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background: #1D1D1F;
+        color: #fff;
+        position: relative;
+    }
+    /*ENCABEZADO*/
+    
+    header {
+        align-items: center;
+        background-color: rgb(20, 20, 20);
+        display: flex;
+        flex-direction: row;
+        height: 50px;
+        padding: 35px 3% 35px 3%;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+    }
+    
+    header h1 {
+        align-items: center;
+        display: flex;
+        margin-right: 10px;
+    }
+    
+    header h1 img {
+        height: auto;
+        width: 100px;
+    }
+    
+    header nav {
+        display: flex;
+        flex-basis: 1;
+        flex-grow: 1;
+        justify-content: flex-start;
+    }
+    
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+    
+    header nav ul li {
+        font-size: 15px;
+        padding-left: 20px;
+    }
+    
+    header nav ul li a:hover {
+        color: #B3B3B3;
+    }
+    
+    header nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    header div {
+        display: flex;
+        flex-basis: 1;
+        flex-direction: row;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    
+    #nav1 {
+        display: none;
+    }
+    
+    #nav1 span {
+        margin-right: 10px;
+    }
+    
+    .icon-magnifying-glass {
+        margin-right: 10px;
+    }
+    
+    #otronav input {
+        background-color: black;
+        border: 1px solid white;
+        color: gray;
+        font-size: 12px;
+        padding: 0 15px 0 15px;
+        margin-right: 10px;
+    }
+    
+    #otronav input,
+    #otronav a {
+        margin-right: 10px;
+    }
+    
+    #otronav a img {
+        border-radius: 5px;
+        height: auto;
+        width: 40px;
+    }
+    
+    #otronav span,
+    #otronav a {
+        align-items: center;
+        color: white;
+        display: flex;
+        text-decoration: none;
+    }
+    
+    #otronav span:hover,
+    #otronav a:hover {
+        cursor: pointer;
+    }
+    /*INTRO*/
+    
+    #intro {
+        height: auto;
+        margin-top: 50px;
+        position: relative;
+        width: 100%;
+    }
+    
+    #presentacion {
+        display: flex;
+        display: row;
+        flex-wrap: wrap;
+        height: 100%;
+        padding: 10% 0 10% 3%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
+    
+    #explicacion {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 50%;
+        z-index: 20;
+    }
+    
+    #explicacion section {
+        width: 100%;
+    }
+    
+    #explicacion p {
+        font-size: 25px;
+    }
+    
+    #explicacion button {
+        border-radius: 5px;
+        border: none;
+        font-size: 25px;
+        font-weight: bolder;
+        padding: 1% 2% 1% 2%;
+    }
+    
+    #explicacion button:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+    
+    #explicacion section:nth-child(1) img {
+        height: auto;
+        width: 100%;
+    }
+    
+    #explicacion section:nth-child(3) button:nth-child(2) {
+        background-color: rgb(20, 20, 20, 0.5);
+        color: white;
+        margin-left: 20px;
+    }
+    
+    #portada {
+        height: auto;
+        width: 100%;
+    }
+    
+    #portada img {
+        height: 100%;
+        position: relative;
+        width: 100%;
+    }
+    
+    #edad {
+        align-content: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        width: 50%;
+    }
+    
+    #edad div {
+        background-color: rgb(20, 20, 20, 0.5);
+        color: white;
+        padding: 20px 30px 20px 30px;
+    }
+    /*CARRUSELES*/
+    
+    #carruselsection {
+        display: flex;
+        align-items: center;
+        padding: 20px 5% 20px 5%;
+    }
+    
+    .titseries {
+        font-size: 29px;
+        font-weight: 500;
+        margin: 30px 0 20px 0;
+    }
+    
+    .contenedor {
+        max-width: 3000px;
+        width: 100%;
+        margin: auto;
+        position: relative;
+    }
+    
+    .carousel__elemento img {
+        padding: 1%;
+        border-radius: 10px;
+    }
+    
+    .carousel__elemento img:hover {
+        border-radius: 4%;
+    }
+    /* --- --- CAROUSEL  1--- --- */
+    
+    .carousel__contenedor {
+        position: relative;
+    }
+    
+    .carousel__elemento {
+        transition: transform .2s;
+        /* Animation */
+    }
+    
+    .fas {
+        font-size: 30px;
+    }
+    
+    .carousel__elemento:hover {
+        transform: scale(1.1);
+        /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        cursor: pointer;
+    }
+    
+    .carousel__anterior,
+    .carousel__siguiente {
+        position: absolute;
+        display: block;
+        width: 30px;
+        height: 30px;
+        border: none;
+        top: calc(50% - 35px);
+        cursor: pointer;
+        line-height: 30px;
+        text-align: center;
+        background: none;
+        color: #fff;
+        opacity: 20%;
+    }
+    
+    .carousel__anterior:hover,
+    .carousel__siguiente:hover {
+        opacity: 100%;
+    }
+    
+    .carousel__anterior {
+        left: -30px;
+    }
+    
+    .carousel__siguiente {
+        right: -30px;
+    }
+    
+    .carousel__lista {
+        overflow: hidden;
+    }
+    
+    .carousel__elemento {
+        text-align: center;
+    }
+    
+    .carousel__indicadores .glider-dot {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background: #fff;
+        opacity: .2;
+        border-radius: 0;
+    }
+    
+    .carousel__indicadores .glider-dot:hover {
+        opacity: .5;
+    }
+    
+    .carousel__indicadores .glider-dot.active {
+        opacity: 1;
+    }
+    /* --- --- CAROUSEL  2--- --- */
+    
+    .carousel__anterior2,
+    .carousel__siguiente2 {
+        position: absolute;
+        display: block;
+        width: 30px;
+        height: 30px;
+        border: none;
+        top: calc(50% - 35px);
+        cursor: pointer;
+        line-height: 30px;
+        text-align: center;
+        background: none;
+        color: #fff;
+        opacity: 20%;
+    }
+    
+    .carousel__anterior2:hover,
+    .carousel__siguiente2:hover {
+        opacity: 100%;
+    }
+    
+    .carousel__anterior2 {
+        left: -30px;
+    }
+    
+    .carousel__siguiente2 {
+        right: -30px;
+    }
+    
+    .carousel__lista2 {
+        overflow: hidden;
+    }
+    
+    .carousel__indicadores2 .glider-dot {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background: #fff;
+        opacity: .2;
+        border-radius: 0;
+    }
+    
+    .carousel__indicadores2 .glider-dot:hover {
+        opacity: .5;
+    }
+    
+    .carousel__indicadores2 .glider-dot.active {
+        opacity: 1;
+    }
+    /* --- --- CAROUSEL  3--- --- */
+    
+    .carousel__anterior3,
+    .carousel__siguiente3 {
+        position: absolute;
+        display: block;
+        width: 30px;
+        height: 30px;
+        border: none;
+        top: calc(50% - 35px);
+        cursor: pointer;
+        line-height: 30px;
+        text-align: center;
+        background: none;
+        color: #fff;
+        opacity: 20%;
+    }
+    
+    .carousel__anterior3:hover,
+    .carousel__siguiente3:hover {
+        opacity: 100%;
+    }
+    
+    .carousel__anterior3 {
+        left: -30px;
+    }
+    
+    .carousel__siguiente3 {
+        right: -30px;
+    }
+    
+    .carousel__lista3 {
+        overflow: hidden;
+    }
+    
+    .carousel__indicadores3 .glider-dot {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background: #fff;
+        opacity: .2;
+        border-radius: 0;
+    }
+    
+    .carousel__indicadores3 .glider-dot:hover {
+        opacity: .5;
+    }
+    
+    .carousel__indicadores3 .glider-dot.active {
+        opacity: 1;
+    }
+    /* --- --- CAROUSEL 4--- --- */
+    
+    .carousel__anterior4,
+    .carousel__siguiente4 {
+        position: absolute;
+        display: block;
+        width: 30px;
+        height: 30px;
+        border: none;
+        top: calc(50% - 35px);
+        cursor: pointer;
+        line-height: 30px;
+        text-align: center;
+        background: none;
+        color: #fff;
+        opacity: 20%;
+    }
+    
+    .carousel__anterior4:hover,
+    .carousel__siguiente4:hover {
+        opacity: 100%;
+    }
+    
+    .carousel__anterior4 {
+        left: -30px;
+    }
+    
+    .carousel__siguiente4 {
+        right: -30px;
+    }
+    
+    .carousel__lista4 {
+        overflow: hidden;
+    }
+    
+    .carousel__indicadores4 .glider-dot {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background: #fff;
+        opacity: .2;
+        border-radius: 0;
+    }
+    
+    .carousel__indicadores4 .glider-dot:hover {
+        opacity: .5;
+    }
+    
+    .carousel__indicadores4 .glider-dot.active {
+        opacity: 1;
+    }
+    /*FOOTER*/
+    
+    footer {
+        display: flex;
+        justify-content: center;
+        padding: 60px 5% 20px 5%;
+    }
+    
+    #footerwrap {
+        width: 60%;
+    }
+    
+    #redes span {
+        font-size: 20px;
+        margin: 10px;
+    }
+    
+    #redes span:hover {
+        cursor: pointer;
+    }
+    
+    #extras {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 13px;
+        justify-content: space-between;
+        margin: 40px 0px 40px 0;
+    }
+    
+    #extras ul {
+        list-style: none;
+        padding: 20px;
+    }
+    
+    #extras ul li {
+        margin-bottom: 10px;
+    }
+    
+    #extras ul li a {
+        color: rgb(128, 128, 128);
+        text-decoration: none;
+    }
+    
+    #extras ul li a:hover {
+        text-decoration: underline;
+    }
+    
+    #footer-boton {
+        margin: 40px 0 40px 0;
+    }
+    
+    #footer-boton a {
+        border: 1px solid rgb(128, 128, 128);
+        color: rgb(128, 128, 128);
+        margin-left: 20px;
+        padding: 5px;
+        text-decoration: none;
+    }
+    
+    #pie {
+        padding: 0 0 20px 20px;
+    }
+    
+    @media screen and (max-width: 1500px) {
+        #extras ul {
+            width: 50%;
+        }
+    }
+    
+    @media screen and (max-width: 1000px) {
+        #explicacion p {
+            font-size: 20px;
+        }
+        #nav2 {
+            display: none;
+        }
+        #nav1 {
+            display: block;
+        }
+        #otronav a:nth-child(3),
+        #otronav input,
+        #otronav span:nth-child(6) {
+            display: none;
+        }
+    }
+    
+    @media screen and (max-width: 900px) {
+        #explicacion button {
+            font-size: 18px;
+        }
+        #explicacion section {
+            padding: 10px;
+        }
+        #explicacion p {
+            font-size: 20px;
+        }
+        #footerwrap {
+            width: 90%;
+        }
+    }
+    
+    @media screen and (max-width: 700px) {
+        #explicacion p {
+            font-size: 15px;
+        }
+        #explicacion {
+            width: 90%;
+        }
+        #explicacion section {
+            padding: 5px;
+        }
+        #explicacion section img {
+            width: 20%;
+        }
+        #edad {
+            display: none;
+        }
+        #explicacion button {
+            font-size: .8em;
+        }
+    }
